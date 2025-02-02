@@ -1,0 +1,107 @@
+services:
+# ====================================================================================================================
+# POSTGRES SERVER
+# ====================================================================================================================
+  pg-docker:
+    image: postgres:latest
+    restart: unless-stopped
+    container_name: dev-postgresql
+    environment:
+      POSTGRES_DB: supportServiceDB
+      POSTGRES_PASSWORD: 1234567
+      TZ: "America/Sao_Paulo"
+    ports:
+      - 5433:5432
+    volumes:
+      - ./data/postgresql/data:/etc/postgresql/data
+    networks:
+      - net-dev
+    profiles:
+      - database
+# ====================================================================================================================
+# PGADMIN
+# ====================================================================================================================
+  pgadmin-docker:
+    image: dpage/pgadmin4
+    restart: unless-stopped
+    container_name: dev-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@pgadmin.com
+      PGADMIN_DEFAULT_PASSWORD: 1234567
+    ports:
+      - 5050:80
+    volumes:
+      - ./data/pgadmin:/etc/pgadmin
+    depends_on:
+      - pg-docker
+    networks:
+      - net-dev
+    profiles:
+      - database
+# ====================================================================================================================
+# PROMETHEUS
+# ====================================================================================================================
+  prometheus:
+    image: prom/prometheus:latest
+    hostname: prometheus
+    container_name: prometheus
+    volumes:
+      - "./observability/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:z"
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+    ports:
+      - "9090:9090"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - net-dev
+    profiles:
+      - observability
+# ====================================================================================================================
+# GRAFANA
+# ====================================================================================================================
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana-supportService
+    networks:
+      - net-dev
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    restart: unless-stopped
+    depends_on:
+      - prometheus
+    profiles:
+      - observability
+# ====================================================================================================================
+# SUPPORT SERVICE API
+# ====================================================================================================================
+  supportService:
+    container_name: support-service-api
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    image: support-service-img
+    ports:
+      - 8081:8081
+    networks:
+      - net-dev
+    env_file:
+      - ./.env
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    restart: unless-stopped
+    profiles:
+      - api-docker
+# ======================================================================================================================
+# NETWORK
+# ======================================================================================================================
+networks:
+  net-dev:
+    driver: bridge
+
+volumes:
+  grafana-storage:
