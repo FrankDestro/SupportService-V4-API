@@ -24,10 +24,12 @@ public class SLAController {
     @PostMapping("/AddSLA")
     public ResponseEntity<SLADTO> addSLAConfig(@Valid @RequestBody SLADTO slaDTO) throws JsonProcessingException {
         slaDTO = slaService.addSLAConfig(slaDTO);
+        System.out.println("teste");
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
                 .buildAndExpand(slaDTO.getId()).toUri();
         return ResponseEntity.created(uri).body(slaDTO);
     }
+
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/getSlaConfig")
