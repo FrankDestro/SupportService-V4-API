@@ -21,7 +21,7 @@ public interface KnowErrorRepository extends JpaRepository<KnowError, Long> {
         AND (:titleText IS NULL OR title LIKE '%' || :titleText || '%')
         AND (:rootCauseText IS NULL OR root_cause LIKE '%' || :rootCauseText || '%')
         AND (:solution IS NULL OR solution LIKE '%' || :solution || '%')
-        AND (COALESCE(ARRAY[]::TEXT[], ARRAY[]::TEXT[]) = ARRAY[]::TEXT[] OR tags && ARRAY[]::TEXT[])
+        AND (COALESCE(ARRAY[]::VARCHAR[], ARRAY[]::VARCHAR[]) = ARRAY[]::VARCHAR[] OR tags && ARRAY[]::VARCHAR[])
         AND (:status IS NULL OR :status = '' OR status = :status)
         AND (:initialDate IS NULL
              OR :finalDate IS NULL
