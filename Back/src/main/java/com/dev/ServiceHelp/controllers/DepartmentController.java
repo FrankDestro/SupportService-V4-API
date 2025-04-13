@@ -3,6 +3,7 @@ package com.dev.ServiceHelp.controllers;
 import com.dev.ServiceHelp.models.dto.DepartmentDTO;
 import com.dev.ServiceHelp.services.DepartmentService;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -21,6 +22,9 @@ public class DepartmentController {
 
     @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_OPERATOR')")
     @GetMapping("/getAllDepartment")
+    @Operation(
+            summary = "Busca todos os depatamentos em uma lista",
+            description = "Retorna uma lista de DepartmentDTO")
     public ResponseEntity<List<DepartmentDTO>> getAllDepartments() throws JsonProcessingException {
         List<DepartmentDTO> departmentList = departmentService.getAllDepartment();
         return ResponseEntity.ok().body(departmentList);

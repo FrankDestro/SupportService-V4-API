@@ -27,8 +27,6 @@ public class TicketDTO {
     private UserSimpleDTO requester;
     private UserSimpleDTO technician;
     private UserSimpleDTO resolver;
-    private Set<TicketHistoryDTO> ticketHistories;
-    private Set<AttachmentDTO> attachments;
 }
 
 
