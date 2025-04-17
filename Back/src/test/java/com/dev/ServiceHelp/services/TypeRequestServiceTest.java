@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.services;
 
-import com.dev.ServiceHelp.models.dto.TypeRequestDTO;
+import com.dev.ServiceHelp.models.dto.shared.TypeRequestDTO;
 import com.dev.ServiceHelp.models.entities.TypeRequest;
 import com.dev.ServiceHelp.factory.TypeRequestFactory;
 import com.dev.ServiceHelp.mappers.TypeRequestMapper;

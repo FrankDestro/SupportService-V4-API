@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.controllers;
 
-import com.dev.ServiceHelp.models.dto.SLADTO;
+import com.dev.ServiceHelp.models.dto.shared.SLADTO;
 import com.dev.ServiceHelp.services.SLAService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import jakarta.validation.Valid;

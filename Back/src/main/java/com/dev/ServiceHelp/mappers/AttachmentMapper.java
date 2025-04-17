@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.mappers;
 
-import com.dev.ServiceHelp.models.dto.AttachmentDTO;
+import com.dev.ServiceHelp.models.dto.shared.AttachmentDTO;
 import com.dev.ServiceHelp.models.entities.Attachment;
 import org.mapstruct.Mapper;
 

@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.mappers;
 
-import com.dev.ServiceHelp.models.dto.CategoryTicketDTO;
+import com.dev.ServiceHelp.models.dto.shared.CategoryTicketDTO;
 import com.dev.ServiceHelp.models.entities.CategoryTicket;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.mappers;
 
-import com.dev.ServiceHelp.models.dto.SolvingAreaDTO;
+import com.dev.ServiceHelp.models.dto.shared.SolvingAreaDTO;
 import com.dev.ServiceHelp.models.entities.SolvingArea;
 import org.mapstruct.Mapper;
 

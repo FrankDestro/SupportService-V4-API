@@ -1,4 +1,4 @@
-package com.dev.ServiceHelp.models.dto;
+package com.dev.ServiceHelp.models.dto.input;
 
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;

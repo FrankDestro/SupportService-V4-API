@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.controllers;
 
-import com.dev.ServiceHelp.models.dto.RoleDTO;
+import com.dev.ServiceHelp.models.dto.shared.RoleDTO;
 import com.dev.ServiceHelp.services.RoleService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.swagger.v3.oas.annotations.Operation;

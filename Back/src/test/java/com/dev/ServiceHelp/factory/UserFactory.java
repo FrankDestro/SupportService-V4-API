@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.factory;
 
-import com.dev.ServiceHelp.models.dto.UserDTO;
+import com.dev.ServiceHelp.models.dto.shared.UserDTO;
 import com.dev.ServiceHelp.models.entities.User;
 import com.dev.ServiceHelp.enums.StatusUser;
 import com.dev.ServiceHelp.mappers.UserMapper;

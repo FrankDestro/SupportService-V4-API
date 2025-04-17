@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.services;
 
-import com.dev.ServiceHelp.models.dto.AttachmentDTO;
+import com.dev.ServiceHelp.models.dto.shared.AttachmentDTO;
 import com.dev.ServiceHelp.models.entities.Attachment;
 import com.dev.ServiceHelp.models.entities.Ticket;
 import com.dev.ServiceHelp.services.exceptions.ResourceNotFoundException;

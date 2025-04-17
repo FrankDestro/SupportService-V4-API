@@ -175,8 +175,6 @@ INSERT INTO ticket_history (description, annotation_public, visible_to_requester
 INSERT INTO ticket_history (description, annotation_public, visible_to_requester, registration_date, system_generated, note_type, ticket_id, user_id) VALUES ('Anotação sobre o progresso do ticket', true, true, TIMESTAMP '2024-10-25 08:30:00', false, 'COMMENT', 1, 1);
 --50 historico de teste do ticket 1
 
-INSERT INTO attachment (url, registration_date, file_name, type, ticket_id, user_id) VALUES ('https://example.com/file.pdf', NOW(), 'file.pdf', 'PDF', 1, 2);
-
 INSERT INTO ticket (subject, description, registration_date, due_date, status_ticket, completion_date, type_request_id, requester_id, sla_id, solving_area_id, category_ticket_id, technician_id, resolver_id, parent_ticket_id) VALUES ('Problema no login', 'Erro ao tentar fazer login no sistema', '2024-10-26 09:00:00', '2024-11-02 09:00:00', 3, '2024-11-02 09:00:00', 2, 3, 1, 2, 2, null, null, null);
 INSERT INTO ticket (subject, description, registration_date, due_date, status_ticket, completion_date, type_request_id, requester_id, sla_id, solving_area_id, category_ticket_id, technician_id, resolver_id, parent_ticket_id) VALUES ('Erro na API', 'Falha ao integrar a API de pagamentos', '2024-10-27 10:15:00', '2024-11-03 10:15:00', 0, '2024-11-03 10:15:00', 3, 4, 2, 3, 3, null, null, null);
 INSERT INTO ticket (subject, description, registration_date, due_date, status_ticket, completion_date, type_request_id, requester_id, sla_id, solving_area_id, category_ticket_id, technician_id, resolver_id, parent_ticket_id) VALUES ('Problema de rede', 'Conexão intermitente com a rede corporativa', '2024-10-28 11:30:00', '2024-11-05 11:30:00', 1, '2024-11-05 11:30:00', 4, 2, 3, 4, 4, null, null, null);
@@ -500,11 +498,12 @@ INSERT INTO ticket_history (description, annotation_public, visible_to_requester
 INSERT INTO ticket_history (description, annotation_public, visible_to_requester, registration_date, system_generated, note_type, ticket_id, user_id) VALUES ('Verificação realizada, aguardando substituição de peça da impressora', true, true, TIMESTAMP '2024-10-30 15:00:00', false, 'COMMENT', 6, 4);
 INSERT INTO ticket_history (description, annotation_public, visible_to_requester, registration_date, system_generated, note_type, ticket_id, user_id) VALUES ('Verificação realizada, aguardando substituição de peça da impressora', true, true, TIMESTAMP '2024-10-30 15:00:00', false, 'COMMENT', 6, 4);
 
-INSERT INTO attachment (url, registration_date, file_name, type, ticket_id, user_id) VALUES ('https://example.com/ticket2-file.pdf', NOW(), 'ticket2-file.pdf', 'PDF', 2, 3);
-INSERT INTO attachment (url, registration_date, file_name, type, ticket_id, user_id) VALUES ('https://example.com/ticket3-file.pdf', NOW(), 'ticket3-file.pdf', 'PDF', 3, 4);
-INSERT INTO attachment (url, registration_date, file_name, type, ticket_id, user_id) VALUES ('https://example.com/ticket4-file.pdf', NOW(), 'ticket4-file.pdf', 'PDF', 4, 4);
-INSERT INTO attachment (url, registration_date, file_name, type, ticket_id, user_id) VALUES ('https://example.com/ticket5-file.pdf', NOW(), 'ticket5-file.pdf', 'PDF', 5, 4);
-INSERT INTO attachment (url, registration_date, file_name, type, ticket_id, user_id) VALUES ('https://example.com/ticket6-file.pdf', NOW(), 'ticket6-file.pdf', 'PDF', 6, 3);
+INSERT INTO attachment (url, registration_date, file_name, type, ticket_id, user_id, SIZE_INMB) VALUES ('https://example.com/file.pdf', NOW(), 'file.pdf', 'PDF', 1, 2, 25);
+INSERT INTO attachment (url, registration_date, file_name, type, ticket_id, user_id, SIZE_INMB) VALUES ('https://example.com/ticket2-file.pdf', NOW(), 'ticket2-file.pdf', 'PDF', 2, 3, 12);
+INSERT INTO attachment (url, registration_date, file_name, type, ticket_id, user_id, SIZE_INMB) VALUES ('https://example.com/ticket3-file.pdf', NOW(), 'ticket3-file.pdf', 'PDF', 3, 4, 10);
+INSERT INTO attachment (url, registration_date, file_name, type, ticket_id, user_id, SIZE_INMB) VALUES ('https://example.com/ticket4-file.pdf', NOW(), 'ticket4-file.pdf', 'PDF', 4, 4, 5);
+INSERT INTO attachment (url, registration_date, file_name, type, ticket_id, user_id, SIZE_INMB) VALUES ('https://example.com/ticket5-file.pdf', NOW(), 'ticket5-file.pdf', 'PDF', 5, 4, 2);
+INSERT INTO attachment (url, registration_date, file_name, type, ticket_id, user_id, SIZE_INMB) VALUES ('https://example.com/ticket6-file.pdf', NOW(), 'ticket6-file.pdf', 'PDF', 6, 3, 8);
 
 INSERT INTO know_Error (id, title, root_cause, solution, tags, status, create_Date, resolution_Date, id_registration_User) VALUES (1, 'Erro ao salvar no banco de dados', 'Conexão interrompida', 'Reiniciar o serviço de banco de dados', '["database", "timeout"]', 'OPEN', '2024-12-01', NULL, 1);
 INSERT INTO know_Error (id, title, root_cause, solution, tags, status, create_Date, resolution_Date, id_registration_User) VALUES (2, 'Falha ao autenticar usuário', 'Credenciais inválidas', 'Reiniciar o servidor de autenticação', '["authentication", "login"]', 'OPEN', '2024-12-02', NULL, 2);

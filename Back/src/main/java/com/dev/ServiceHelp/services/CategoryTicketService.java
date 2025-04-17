@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.services;
 
-import com.dev.ServiceHelp.models.dto.CategoryTicketDTO;
+import com.dev.ServiceHelp.models.dto.shared.CategoryTicketDTO;
 import com.dev.ServiceHelp.models.entities.CategoryTicket;
 import com.dev.ServiceHelp.mappers.CategoryTicketMapper;
 import com.dev.ServiceHelp.repository.CategoryTicketRepository;

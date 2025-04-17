@@ -1,4 +1,4 @@
-package com.dev.ServiceHelp.models.dto;
+package com.dev.ServiceHelp.models.dto.shared;
 
 import com.dev.ServiceHelp.enums.StatusUser;
 import lombok.AllArgsConstructor;

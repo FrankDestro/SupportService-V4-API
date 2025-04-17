@@ -1,7 +1,7 @@
 package com.dev.ServiceHelp.services;
 
-import com.dev.ServiceHelp.models.dto.TicketHistoryDTO;
-import com.dev.ServiceHelp.models.dto.UserSimpleDTO;
+import com.dev.ServiceHelp.models.dto.shared.TicketHistoryDTO;
+import com.dev.ServiceHelp.models.dto.output.UserSimpleDTO;
 import com.dev.ServiceHelp.models.entities.Ticket;
 import com.dev.ServiceHelp.models.entities.TicketHistory;
 import com.dev.ServiceHelp.models.entities.User;

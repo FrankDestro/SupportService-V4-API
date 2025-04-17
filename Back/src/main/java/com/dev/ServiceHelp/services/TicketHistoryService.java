@@ -1,17 +1,17 @@
 package com.dev.ServiceHelp.services;
 
 import com.dev.ServiceHelp.mappers.TicketHistoryMapper;
-import com.dev.ServiceHelp.models.dto.TicketHistoryDTO;
+import com.dev.ServiceHelp.models.dto.shared.TicketHistoryDTO;
 import com.dev.ServiceHelp.models.entities.Ticket;
 import com.dev.ServiceHelp.models.entities.TicketHistory;
 import com.dev.ServiceHelp.repository.TicketHistoryRepository;
 import com.dev.ServiceHelp.repository.TicketRepository;
 import com.dev.ServiceHelp.utils.ResourceUtil;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 
 @RequiredArgsConstructor
@@ -39,9 +39,9 @@ public class TicketHistoryService {
     }
 
     @Transactional
-    public Page<TicketHistoryDTO> getTicketHistoryTicketById(Long ticketId, Pageable pageable) {
-        Page<TicketHistory> ticketHistory = ticketHistoryRepository.findByTicketIdNative(ticketId, pageable);
-        Page<TicketHistoryDTO> dtoPage = ticketHistory.map(ticketHistoryMapper::toTicketHistoryDTO);
+    public List<TicketHistoryDTO> getTicketHistoryTicketById(Long ticketId) {
+        List<TicketHistory> ticketHistory = ticketHistoryRepository.findByTicketIdNative(ticketId);
+        List<TicketHistoryDTO> dtoPage = ticketHistory.stream().map(ticketHistoryMapper::toTicketHistoryDTO).toList();
         return dtoPage;
     }
 }

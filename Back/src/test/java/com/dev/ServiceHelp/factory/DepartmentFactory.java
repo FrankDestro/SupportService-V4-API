@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.factory;
 
-import com.dev.ServiceHelp.models.dto.DepartmentDTO;
+import com.dev.ServiceHelp.models.dto.shared.DepartmentDTO;
 import com.dev.ServiceHelp.models.entities.Department;
 import com.dev.ServiceHelp.models.entities.User;
 import com.dev.ServiceHelp.mappers.DepartmentMapper;

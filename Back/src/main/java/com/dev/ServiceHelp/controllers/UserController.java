@@ -1,7 +1,7 @@
 package com.dev.ServiceHelp.controllers;
 
-import com.dev.ServiceHelp.models.dto.UserDTO;
-import com.dev.ServiceHelp.models.dto.UserUpdateDTO;
+import com.dev.ServiceHelp.models.dto.shared.UserDTO;
+import com.dev.ServiceHelp.models.dto.input.UserUpdateDTO;
 import com.dev.ServiceHelp.enums.StatusUser;
 import com.dev.ServiceHelp.services.UserService;
 import jakarta.validation.Valid;

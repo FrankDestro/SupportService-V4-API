@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.controllers;
 
-import com.dev.ServiceHelp.models.dto.CategoryTicketDTO;
+import com.dev.ServiceHelp.models.dto.shared.CategoryTicketDTO;
 import com.dev.ServiceHelp.services.CategoryTicketService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.RequiredArgsConstructor;

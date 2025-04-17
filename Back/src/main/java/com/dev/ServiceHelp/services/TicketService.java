@@ -1,10 +1,10 @@
 package com.dev.ServiceHelp.services;
 
 import com.dev.ServiceHelp.constants.TicketHistoryConstants;
-import com.dev.ServiceHelp.models.dto.TicketDTO;
-import com.dev.ServiceHelp.models.dto.TicketHistoryDTO;
-import com.dev.ServiceHelp.models.dto.TicketSimpleDTO;
-import com.dev.ServiceHelp.models.dto.TicketUpdateDTO;
+import com.dev.ServiceHelp.models.dto.shared.TicketDTO;
+import com.dev.ServiceHelp.models.dto.shared.TicketHistoryDTO;
+import com.dev.ServiceHelp.models.dto.output.TicketSimpleDTO;
+import com.dev.ServiceHelp.models.dto.input.TicketUpdateDTO;
 import com.dev.ServiceHelp.enums.NoteType;
 import com.dev.ServiceHelp.enums.StatusTicket;
 import com.dev.ServiceHelp.mappers.TicketHistoryMapper;
@@ -116,13 +116,6 @@ public class TicketService {
         Ticket ticket = ResourceUtil.getOrThrow(
                 ticketRepository.findById(id),
                 "Ticket with ID " + id + " not found");
-
-        Set<TicketHistory> ticketHistoriesResult = ticketHistoryRepository.findByTicketId(ticket.getId());
-        ticket.setTicketHistories(ticketHistoriesResult);
-
-        Set<Attachment> attachmentsResult = attachmentRepository.findByTicketId(ticket.getId());
-        ticket.setAttachments(attachmentsResult);
-
         return ticketMapper.toTicketDTO(ticket);
     }
 

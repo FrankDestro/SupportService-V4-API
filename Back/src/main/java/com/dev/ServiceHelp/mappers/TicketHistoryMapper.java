@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.mappers;
 
-import com.dev.ServiceHelp.models.dto.TicketHistoryDTO;
+import com.dev.ServiceHelp.models.dto.shared.TicketHistoryDTO;
 import com.dev.ServiceHelp.models.entities.Ticket;
 import com.dev.ServiceHelp.models.entities.TicketHistory;
 import com.dev.ServiceHelp.models.entities.User;

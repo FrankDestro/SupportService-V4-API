@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.services;
 
-import com.dev.ServiceHelp.models.dto.KnowErrorDTO;
+import com.dev.ServiceHelp.models.dto.shared.KnowErrorDTO;
 import com.dev.ServiceHelp.models.entities.KnowError;
 import com.dev.ServiceHelp.mappers.KnowErrorMapper;
 import com.dev.ServiceHelp.repository.KnowErrorRepository;

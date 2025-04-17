@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.controllers;
 
-import com.dev.ServiceHelp.models.dto.KnowErrorDTO;
+import com.dev.ServiceHelp.models.dto.shared.KnowErrorDTO;
 import com.dev.ServiceHelp.services.KnowErrorService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

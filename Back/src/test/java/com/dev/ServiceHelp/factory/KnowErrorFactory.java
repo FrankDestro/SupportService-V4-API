@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.factory;
 
-import com.dev.ServiceHelp.models.dto.KnowErrorDTO;
+import com.dev.ServiceHelp.models.dto.shared.KnowErrorDTO;
 import com.dev.ServiceHelp.models.entities.KnowError;
 import com.dev.ServiceHelp.enums.StatusKnowError;
 import com.dev.ServiceHelp.mappers.KnowErrorMapper;

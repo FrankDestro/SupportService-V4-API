@@ -1,6 +1,7 @@
-package com.dev.ServiceHelp.models.dto;
+package com.dev.ServiceHelp.models.dto.shared;
 
 import com.dev.ServiceHelp.enums.StatusKnowError;
+import com.dev.ServiceHelp.models.dto.output.AttachmentSimpleDTO;
 import jakarta.persistence.Column;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

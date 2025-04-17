@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.mappers;
 
-import com.dev.ServiceHelp.models.dto.RoleDTO;
+import com.dev.ServiceHelp.models.dto.shared.RoleDTO;
 import com.dev.ServiceHelp.models.entities.Role;
 import org.mapstruct.Mapper;
 

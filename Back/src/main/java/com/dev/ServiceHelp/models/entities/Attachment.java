@@ -42,10 +42,11 @@ public class Attachment {
     @JoinColumn(name = "user_id")
     private User user;
 
-    //NOVO
     @ManyToOne
     @JoinColumn(name = "known_error_id")
     private KnowError knowError;
+
+    private Double sizeInMB;
 
     @PrePersist
     private void prePersist() {

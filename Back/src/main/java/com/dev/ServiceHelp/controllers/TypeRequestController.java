@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.controllers;
 
-import com.dev.ServiceHelp.models.dto.TypeRequestDTO;
+import com.dev.ServiceHelp.models.dto.shared.TypeRequestDTO;
 import com.dev.ServiceHelp.services.TypeRequestService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.RequiredArgsConstructor;

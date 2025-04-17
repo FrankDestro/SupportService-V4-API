@@ -1,7 +1,7 @@
 package com.dev.ServiceHelp.factory;
 
-import com.dev.ServiceHelp.models.dto.TicketDTO;
-import com.dev.ServiceHelp.models.dto.TicketSimpleDTO;
+import com.dev.ServiceHelp.models.dto.shared.TicketDTO;
+import com.dev.ServiceHelp.models.dto.output.TicketSimpleDTO;
 import com.dev.ServiceHelp.models.entities.Ticket;
 import com.dev.ServiceHelp.enums.StatusTicket;
 import com.dev.ServiceHelp.mappers.AttachmentMapper;

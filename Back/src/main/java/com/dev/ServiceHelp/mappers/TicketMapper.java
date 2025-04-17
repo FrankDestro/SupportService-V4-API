@@ -1,9 +1,9 @@
 package com.dev.ServiceHelp.mappers;
 
 import com.dev.ServiceHelp.enums.StatusTicket;
-import com.dev.ServiceHelp.models.dto.AttachmentDTO;
-import com.dev.ServiceHelp.models.dto.TicketDTO;
-import com.dev.ServiceHelp.models.dto.TicketSimpleDTO;
+import com.dev.ServiceHelp.models.dto.shared.AttachmentDTO;
+import com.dev.ServiceHelp.models.dto.shared.TicketDTO;
+import com.dev.ServiceHelp.models.dto.output.TicketSimpleDTO;
 import com.dev.ServiceHelp.models.entities.*;
 import com.dev.ServiceHelp.utils.ResourceUtil;
 import org.mapstruct.*;

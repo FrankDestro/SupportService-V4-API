@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.factory;
 
-import com.dev.ServiceHelp.models.dto.TypeRequestDTO;
+import com.dev.ServiceHelp.models.dto.shared.TypeRequestDTO;
 import com.dev.ServiceHelp.models.entities.TypeRequest;
 import com.dev.ServiceHelp.mappers.TypeRequestMapper;
 import lombok.Setter;

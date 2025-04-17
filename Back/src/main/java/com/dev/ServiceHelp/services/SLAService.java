@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.services;
 
-import com.dev.ServiceHelp.models.dto.SLADTO;
+import com.dev.ServiceHelp.models.dto.shared.SLADTO;
 import com.dev.ServiceHelp.models.entities.SLA;
 import com.dev.ServiceHelp.mappers.SLAMapper;
 import com.dev.ServiceHelp.repository.SLARepository;

@@ -1,5 +1,6 @@
-package com.dev.ServiceHelp.models.dto;
+package com.dev.ServiceHelp.models.dto.input;
 
+import com.dev.ServiceHelp.models.dto.shared.UserDTO;
 import com.dev.ServiceHelp.services.validation.UserInsertValid;
 import jakarta.validation.constraints.Pattern;
 

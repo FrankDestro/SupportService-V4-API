@@ -1,7 +1,7 @@
 package com.dev.ServiceHelp.mappers;
 
-import com.dev.ServiceHelp.models.dto.UserDTO;
-import com.dev.ServiceHelp.models.dto.UserUpdateDTO;
+import com.dev.ServiceHelp.models.dto.shared.UserDTO;
+import com.dev.ServiceHelp.models.dto.input.UserUpdateDTO;
 import com.dev.ServiceHelp.models.entities.User;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

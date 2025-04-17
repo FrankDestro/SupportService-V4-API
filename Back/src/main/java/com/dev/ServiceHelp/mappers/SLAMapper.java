@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.mappers;
 
-import com.dev.ServiceHelp.models.dto.SLADTO;
+import com.dev.ServiceHelp.models.dto.shared.SLADTO;
 import com.dev.ServiceHelp.models.entities.SLA;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

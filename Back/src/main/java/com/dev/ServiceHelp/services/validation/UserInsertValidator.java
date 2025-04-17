@@ -2,7 +2,7 @@ package com.dev.ServiceHelp.services.validation;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.dev.ServiceHelp.models.dto.UserInsertDTO;
+import com.dev.ServiceHelp.models.dto.input.UserInsertDTO;
 import com.dev.ServiceHelp.repository.UserRepository;
 
 import jakarta.validation.ConstraintValidator;

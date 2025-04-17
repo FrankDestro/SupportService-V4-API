@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.factory;
 
-import com.dev.ServiceHelp.models.dto.AttachmentDTO;
+import com.dev.ServiceHelp.models.dto.shared.AttachmentDTO;
 import com.dev.ServiceHelp.models.entities.Attachment;
 import com.dev.ServiceHelp.enums.FileType;
 import com.dev.ServiceHelp.mappers.AttachmentMapper;

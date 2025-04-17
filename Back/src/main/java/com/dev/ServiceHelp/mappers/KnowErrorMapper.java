@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.mappers;
 
-import com.dev.ServiceHelp.models.dto.KnowErrorDTO;
+import com.dev.ServiceHelp.models.dto.shared.KnowErrorDTO;
 import com.dev.ServiceHelp.models.entities.KnowError;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

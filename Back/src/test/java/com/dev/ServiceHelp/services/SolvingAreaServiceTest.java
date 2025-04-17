@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.services;
 
-import com.dev.ServiceHelp.models.dto.SolvingAreaDTO;
+import com.dev.ServiceHelp.models.dto.shared.SolvingAreaDTO;
 import com.dev.ServiceHelp.models.entities.SolvingArea;
 import com.dev.ServiceHelp.factory.SolvingAreaFactory;
 import com.dev.ServiceHelp.mappers.SolvingAreaMapper;

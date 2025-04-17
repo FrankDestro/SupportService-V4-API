@@ -1,5 +1,7 @@
-package com.dev.ServiceHelp.models.dto;
+package com.dev.ServiceHelp.models.dto.input;
 
+import com.dev.ServiceHelp.models.dto.shared.DepartmentDTO;
+import com.dev.ServiceHelp.models.dto.shared.SolvingAreaDTO;
 import com.dev.ServiceHelp.services.validation.UserUpdateValid;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;

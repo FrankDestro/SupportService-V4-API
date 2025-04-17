@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.factory;
 
-import com.dev.ServiceHelp.models.dto.TicketHistoryDTO;
+import com.dev.ServiceHelp.models.dto.shared.TicketHistoryDTO;
 import com.dev.ServiceHelp.models.entities.TicketHistory;
 import com.dev.ServiceHelp.enums.NoteType;
 import com.dev.ServiceHelp.mappers.TicketHistoryMapper;

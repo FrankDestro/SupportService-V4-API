@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.controllers;
 
-import com.dev.ServiceHelp.models.dto.SolvingAreaDTO;
+import com.dev.ServiceHelp.models.dto.shared.SolvingAreaDTO;
 import com.dev.ServiceHelp.services.SolvingAreaService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.RequiredArgsConstructor;

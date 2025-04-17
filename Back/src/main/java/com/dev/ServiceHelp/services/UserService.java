@@ -1,8 +1,8 @@
 package com.dev.ServiceHelp.services;
 
-import com.dev.ServiceHelp.models.dto.RoleDTO;
-import com.dev.ServiceHelp.models.dto.UserDTO;
-import com.dev.ServiceHelp.models.dto.UserUpdateDTO;
+import com.dev.ServiceHelp.models.dto.shared.RoleDTO;
+import com.dev.ServiceHelp.models.dto.shared.UserDTO;
+import com.dev.ServiceHelp.models.dto.input.UserUpdateDTO;
 import com.dev.ServiceHelp.models.entities.Department;
 import com.dev.ServiceHelp.models.entities.Role;
 import com.dev.ServiceHelp.models.entities.SolvingArea;

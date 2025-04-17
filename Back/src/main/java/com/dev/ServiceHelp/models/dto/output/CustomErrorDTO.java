@@ -1,4 +1,4 @@
-package com.dev.ServiceHelp.models.dto;
+package com.dev.ServiceHelp.models.dto.output;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

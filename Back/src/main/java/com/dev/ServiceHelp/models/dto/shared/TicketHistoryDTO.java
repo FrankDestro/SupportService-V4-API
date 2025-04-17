@@ -1,6 +1,7 @@
-package com.dev.ServiceHelp.models.dto;
+package com.dev.ServiceHelp.models.dto.shared;
 
 import com.dev.ServiceHelp.enums.NoteType;
+import com.dev.ServiceHelp.models.dto.output.UserSimpleDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

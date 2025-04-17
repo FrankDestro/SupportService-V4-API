@@ -1,17 +1,18 @@
-package com.dev.ServiceHelp.models.dto;
+package com.dev.ServiceHelp.models.dto.output;
 
 import com.dev.ServiceHelp.enums.StatusTicket;
+import com.dev.ServiceHelp.models.dto.shared.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.Instant;
-import java.util.Set;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class TicketDTO {
+public class TicketSimpleDTO {
+
     private Long id;
     private String subject;
     private String description;
@@ -19,14 +20,11 @@ public class TicketDTO {
     private Instant dueDate;
     private StatusTicket statusTicket;
     private Instant completionDate;
-    private Long parentTicketId;
     private TypeRequestDTO typeRequest;
     private SLADTO sla;
     private SolvingAreaDTO solvingArea;
     private CategoryTicketDTO categoryTicket;
-    private UserSimpleDTO requester;
-    private UserSimpleDTO technician;
-    private UserSimpleDTO resolver;
+    private UserDTO requester;
+    private UserDTO technician;
+    private UserDTO resolver;
 }
-
-

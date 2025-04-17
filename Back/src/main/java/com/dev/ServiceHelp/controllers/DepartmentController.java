@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.controllers;
 
-import com.dev.ServiceHelp.models.dto.DepartmentDTO;
+import com.dev.ServiceHelp.models.dto.shared.DepartmentDTO;
 import com.dev.ServiceHelp.services.DepartmentService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.swagger.v3.oas.annotations.Operation;

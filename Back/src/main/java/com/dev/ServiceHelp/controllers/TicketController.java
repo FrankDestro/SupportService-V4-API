@@ -1,8 +1,8 @@
 package com.dev.ServiceHelp.controllers;
 
-import com.dev.ServiceHelp.models.dto.TicketDTO;
-import com.dev.ServiceHelp.models.dto.TicketSimpleDTO;
-import com.dev.ServiceHelp.models.dto.TicketUpdateDTO;
+import com.dev.ServiceHelp.models.dto.shared.TicketDTO;
+import com.dev.ServiceHelp.models.dto.output.TicketSimpleDTO;
+import com.dev.ServiceHelp.models.dto.input.TicketUpdateDTO;
 import com.dev.ServiceHelp.enums.StatusTicket;
 import com.dev.ServiceHelp.projections.*;
 import com.dev.ServiceHelp.services.TicketService;

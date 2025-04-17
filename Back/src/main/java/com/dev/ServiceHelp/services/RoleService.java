@@ -1,6 +1,6 @@
 package com.dev.ServiceHelp.services;
 
-import com.dev.ServiceHelp.models.dto.RoleDTO;
+import com.dev.ServiceHelp.models.dto.shared.RoleDTO;
 import com.dev.ServiceHelp.models.entities.Role;
 import com.dev.ServiceHelp.mappers.RoleMapper;
 import com.dev.ServiceHelp.repository.RoleRepository;

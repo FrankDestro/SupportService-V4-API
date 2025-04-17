@@ -1,19 +1,17 @@
 package com.dev.ServiceHelp.services;
 
-import com.dev.ServiceHelp.models.dto.AttachmentDTO;
-import com.dev.ServiceHelp.models.dto.TicketHistoryDTO;
+import com.dev.ServiceHelp.models.dto.shared.AttachmentDTO;
 import com.dev.ServiceHelp.models.entities.Attachment;
 import com.dev.ServiceHelp.models.entities.Ticket;
 import com.dev.ServiceHelp.mappers.AttachmentMapper;
-import com.dev.ServiceHelp.models.entities.TicketHistory;
 import com.dev.ServiceHelp.repository.AttachmentRepository;
 import com.dev.ServiceHelp.repository.TicketRepository;
 import com.dev.ServiceHelp.services.exceptions.ResourceNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @Service
@@ -41,9 +39,9 @@ public class AttachmentService {
     }
 
     @org.springframework.transaction.annotation.Transactional
-    public Page<AttachmentDTO> getAttachmentTicketById(Long ticketId, Pageable pageable) {
-        Page<Attachment> attachments = attachmentRepository.findByTicketIdNative(ticketId, pageable);
-        Page<AttachmentDTO> dtoPage = attachments.map(attachmentMapper::toAttachmentDTO);
+    public List<AttachmentDTO> getAttachmentTicketById(Long ticketId) {
+        List<Attachment> attachments = attachmentRepository.findByTicketIdNative(ticketId);
+        List<AttachmentDTO> dtoPage = attachments.stream().map(attachmentMapper::toAttachmentDTO).toList();
         return dtoPage;
     }
 }
