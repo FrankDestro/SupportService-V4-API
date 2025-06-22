@@ -82,4 +82,16 @@ public class ResourceExceptionHandler {
 		err.setPath(request.getRequestURI());
 		return ResponseEntity.status(status).body(err);
 	}
+
+	@ExceptionHandler(SecurityException.class)
+	public ResponseEntity<StandardError> ticketCannotBeChanged(SecurityException e, HttpServletRequest request) {
+		HttpStatus status = HttpStatus.METHOD_NOT_ALLOWED;
+		StandardError err = new StandardError();
+		err.setTimestamp(Instant.now());
+		err.setStatus(status.value());
+		err.setError("Acesso negado. Usuário não possui permissão necessária");
+		err.setMessage(e.getMessage());
+		err.setPath(request.getRequestURI());
+		return ResponseEntity.status(status).body(err);
+	}
 }

@@ -31,7 +31,6 @@ public class UserController {
 
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/getAllUsers")
-
     public ResponseEntity<Page<UserDTO>> getUserPaged(
             @RequestParam(name = "id", required = false) Long id,
             @RequestParam(name = "name", defaultValue = "") String name,

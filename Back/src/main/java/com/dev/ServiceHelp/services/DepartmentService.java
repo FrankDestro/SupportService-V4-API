@@ -1,5 +1,7 @@
 package com.dev.ServiceHelp.services;
 
+import com.dev.ServiceHelp.Aspect.annotations.Loggable;
+import com.dev.ServiceHelp.Aspect.annotations.Validation;
 import com.dev.ServiceHelp.models.dto.shared.DepartmentDTO;
 import com.dev.ServiceHelp.models.entities.Department;
 import com.dev.ServiceHelp.mappers.DepartmentMapper;
@@ -17,6 +19,8 @@ public class DepartmentService {
     private final DepartmentRepository departmentRepository;
     private final DepartmentMapper departmentMapper;
 
+    @Loggable
+    @Validation
     @Transactional(readOnly = true)
     public List<DepartmentDTO> getAllDepartment() {
         List<Department> departmentList = departmentRepository.findAll();
