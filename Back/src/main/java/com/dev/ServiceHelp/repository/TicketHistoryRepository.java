@@ -12,9 +12,10 @@ public interface TicketHistoryRepository extends JpaRepository<TicketHistory, Lo
 
     Set<TicketHistory> findByTicketId(Long ticketId);
 
-    @Query(value = "SELECT * FROM TICKET_HISTORY  WHERE ticket_id = :ticketId",
-            countQuery = "SELECT count(*) FROM TICKET_HISTORY  WHERE ticket_id = :ticketId",
+    @Query(value = "SELECT * FROM TICKET_HISTORY WHERE ticket_id = :ticketId ORDER BY registration_date DESC",
+            countQuery = "SELECT count(*) FROM TICKET_HISTORY WHERE ticket_id = :ticketId",
             nativeQuery = true)
     List<TicketHistory> findByTicketIdNative(@Param("ticketId") Long ticketId);
+
 
 }

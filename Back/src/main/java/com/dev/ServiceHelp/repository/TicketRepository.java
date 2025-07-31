@@ -24,7 +24,8 @@ public interface TicketRepository extends JpaRepository<Ticket, Long> {
             "AND (:sla IS NULL OR obj.sla = :sla) " +
             "AND (:technicianID IS NULL OR obj.technician.id = :technicianID) " +
             "AND (:requesterID IS NULL OR obj.requester.id = :requesterID) " +
-            "AND (:solvingAreaID IS NULL OR obj.solvingArea.id = :solvingAreaID)")
+            "AND (:solvingAreaID IS NULL OR obj.solvingArea.id = :solvingAreaID)" +
+            "ORDER BY obj.registrationDate ASC")
     Page<Ticket> searchTicketsByParams(
             Long id,
             String registrationDate,
